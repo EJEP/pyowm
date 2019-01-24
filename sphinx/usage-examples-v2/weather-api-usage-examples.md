@@ -56,11 +56,11 @@ The PyOWM library comes with a built-in support for local caches: OWM Weather AP
 By using the ``configuration25.py`` module, it is also possible to leverage external cache providers  module, provided that they implement the interface that is expected by the library code.
 
 ### Getting currently observed weather for a specific location.
-Querying for current weather is simple: provide an ``OWM`` object with the location you want the current weather be looked up for and the job is done. You can specify the location either by passing its toponym (eg: "London"), the city ID (eg: 2643741) or its geographic coordinates (lon/lat):
+Querying for current weather is simple: provide an ``OWM`` object with the location you want the current weather be looked up for and the job is done. You can specify the location either by passing its toponym (eg: "London"), the city ID (eg: 2643741) or its geographic coordinates (lat/lon):
 
     obs = owm.weather_at_place('London,GB')                    # Toponym
     obs = owm.weather_at_id(2643741)                           # City ID
-    obs = owm.weather_at_coords(-0.107331,51.503614)           # lat/lon
+    obs = owm.weather_at_coords(51.503614,-0.107331)           # lat/lon
 
 An ``Observation`` object will be returned, containing weather info about the location matching the toponym/ID/coordinates you provided. Be precise when specifying locations!
 
