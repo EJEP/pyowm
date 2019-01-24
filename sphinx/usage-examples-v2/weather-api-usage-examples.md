@@ -117,10 +117,10 @@ Examples:
     # As above but limit result items to 5
     obs_list = owm.weather_at_places('London',searchtype='like', 5)
 
-    # Find observed weather for all the places in the surroundings of lon=-2.15,lat=57
-    obs_list = owm.weather_around_coords(-2.15, 57)
+    # Find observed weather for all the places in the surroundings of lat=57,lon=-2.15
+    obs_list = owm.weather_around_coords(57, -2.15)
     # As above but limit result items to 8
-    obs_list = owm.weather_around_coords(-2.15, 57, limit=8)
+    obs_list = owm.weather_around_coords(57, -2.15, limit=8)
 
 ### Getting data from Observation objects
 ``Observation`` objects store two useful objects: a ``Weather`` object that contains the weather-related data and a ``Location`` object that describes the location the weather data is provided for.
